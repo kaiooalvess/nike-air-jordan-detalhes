@@ -330,12 +330,55 @@ main {
         margin: 0 auto;
         border: 1px solid red;
         display: grid;
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: repeat(2, 632px);
+        gap: 16px;
 
-        .fotos {}
+        .fotos {
+            grid-column: 1;
+            grid-row: span 2;
 
-        .desc {}
+            .grande {
+                width: 632px;
+                height: 632px;
+                overflow: hidden;
 
-        .detalhes {}
+                img {
+                    width: 100%;
+                    display: block;
+                    transition: 300ms ease all;
+                }
+
+                &:hover img {
+                    transform: scale(105%) rotate(5deg);
+                }
+
+            }
+
+            .miniaturas {
+                width: 100%;
+                display: flex;
+
+
+                .mini {
+                    width: 79px;
+                    height: 79px;
+
+                    img {
+                        width: 100%;
+                        display: block;
+                    }
+                }
+            }
+        }
+
+        .desc {
+            grid-column: 2;
+            grid-row: 1;
+        }
+
+        .detalhes {
+            grid-column: 2;
+            grid-row: 2;
+        }
     }
 }
