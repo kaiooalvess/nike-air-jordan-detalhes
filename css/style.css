@@ -41,7 +41,7 @@ body {
     flex-direction: column;
     background-color: var(--white);
     font-family: sans-serif;
-    /* background-image: url(https://images.unsplash.com/photo-1441986300917-64674bd600d8?fm=jpg&q=60&w=3000&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8bG9qYSUyMGRlJTIwcm91cGFzfGVufDB8fDB8fHww); */
+    background-image: url(/assets/thumbs/bekky-bekks-AL5i1Gp8I_U-unsplash.jpg);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -152,13 +152,145 @@ body {
             }
 
             .icones {
-                list-style: none;
+
+                display: flex;
+                gap: 4px;
+
+                li {
+                    list-style: none;
+                    width: 36px;
+                    height: 36px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                }
+
+                a {
+                    display: flex;
+                    font-size: 24px;
+                    width: 36px;
+                    height: 36px;
+                    justify-content: center;
+                    align-items: center;
+                    color: var(--black);
+                    border-radius: 50%;
+
+                    &:hover {
+                        background-color: var(--light-gray);
+                        transition: 2s;
+                    }
+                }
 
             }
         }
 
-        .bottomBar {}
+        .bottomBar {
+            width: 100%;
+            height: 55px;
+            background-color: var(--dark-gray);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 16px;
+
+            .prev,
+            next {
+                width: 24px;
+                height: 24px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                font-size: 20px;
+            }
+
+            .msgs {
+                width: 850px;
+                height: 55px;
+                position: relative;
+                overflow: hidden;
+
+                .msg {
+                    width: 850px;
+                    height: 55px;
+                    justify-content: center;
+                    display: flex;
+                    align-items: center;
+                    animation-name: rolarTexto;
+                    animation-duration: 13s;
+                    animation-timing-function: linear;
+                    animation-iteration-count: infinite;
+                }
+
+                .msg:nth-child(1) {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                }
+
+                .msg:nth-child(2) {
+                    position: absolute;
+                    top: 0;
+                    left: 850px;
+                }
+
+                .msg:nth-child(3) {
+                    position: absolute;
+                    top: 0;
+                    left: 1700px;
+                }
+
+                .msg:nth-child(4) {
+                    position: absolute;
+                    top: 0;
+                    left: 2550px;
+                }
+            }
+
+        }
 
         .breadcrumb {}
+    }
+}
+
+@keyframes rolarTexto {
+    0% {
+        transform: translateX(0);
+
+    }
+
+    20% {
+        transform: translateX(0);
+    }
+
+    25% {
+        transform: translateX(-100%);
+    }
+
+    45% {
+        transform: translateX(-100%);
+    }
+
+    40% {
+        transform: translateX(-100%);
+    }
+
+    50% {
+        transform: translateX(-200%);
+    }
+
+    70% {
+        transform: translateX(-200%);
+    }
+
+    75% {
+        transform: translateX(-300%);
+    }
+
+    95% {
+        transform: translateX(-300%);
+    }
+
+    100% {
+        transform: translateX(0);
     }
 }
