@@ -41,7 +41,7 @@ body {
     flex-direction: column;
     background-color: var(--white);
     font-family: sans-serif;
-    background-image: url(/assets/thumbs/bekky-bekks-AL5i1Gp8I_U-unsplash.jpg);
+    /* background-image: url(/assets/thumbs/bekky-bekks-AL5i1Gp8I_U-unsplash.jpg); */
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -248,7 +248,33 @@ body {
 
         }
 
-        .breadcrumb {}
+        .breadcrumb {
+            width: 100px;
+            height: 100px;
+            padding: 0 50px;
+            display: flex;
+            align-items: center;
+
+            ul {
+                display: flex;
+
+                li {
+                    list-style-type: none;
+                    font-size: 14px;
+                    color: var(--black);
+
+                    a {
+                        font-size: 14px;
+                        color: var(--black);
+
+                        &::after {
+                            content: "/";
+                            padding: 0 8px;
+                        }
+                    }
+                }
+            }
+        }
     }
 }
 
@@ -292,5 +318,24 @@ body {
 
     100% {
         transform: translateX(0);
+    }
+}
+
+main {
+    width: 100%;
+    padding: 16px 0;
+
+    .produto {
+        width: 1280px;
+        margin: 0 auto;
+        border: 1px solid red;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+
+        .fotos {}
+
+        .desc {}
+
+        .detalhes {}
     }
 }
